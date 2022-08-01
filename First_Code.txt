@@ -1,0 +1,520 @@
+=== Dart Basics ===
+
+--> According to leccture
+1. What is Dart
+  ==> Dart is a simple programming language related to some other 
+      programming language Like(Python, C++, JavaScript).
+2. Dart Syntax
+   ==> void main(){}
+3. Comments In Dart
+   ==> void main(){
+         // print("Hello world");  => Single line comment
+         /* print("Second Text"); => Double line comment
+         print("Third Text"); */
+  	 /// Document  => (Doc) => Code Topic
+  	}
+4. Variable
+   ==>  /* 
+        1. int
+   	  --> int  mynumber = 56;
+  	      print(mynumber); output => 56 
+        2. string
+   	  --> String  mytext = "Hello world";
+  	      print(mytext); output => Hello world
+   	3. boolain
+   	  --> bool  value = true;
+  	      print(value); output => true
+   	4. double
+   	  --> double  mypointvalue = 56.190;
+  	      print(mypointvalue); output => 56.19
+   	5. list
+          --> List  mylist = [2, 4, 'second'];
+  	      sprint(mylist); 
+  	      print(mylist[0]);
+  	      print(mylist[2]);
+   	6. Map
+   	  --> Map  mymap = {'name': 'noman', 'country': 'Pakistan'};
+  	      print(mymap); 
+  	      print(mymap['name']);
+  	      print(mymap['country']);
+        7. Dynamic
+  	  --> var  myvarone = {'name': 'noman', 'country': 'Pakistan'};
+  	      print(myvarone); 
+  	      var  myvartwo = 'hello string';
+  	      print(myvartwo);
+  	      var  myvarthree = 10;
+  	      print(myvarthree);
+  	      var  myvarfour = true;
+  	      print(myvarfour);
+   	*/
+   
+5. Data Types
+6. String 
+   ==> String topics
+      --> Add
+         String lname = 'hello';
+   	 String fname = 'world';
+   	 print(lname + ' '+fname);
+     --> Change case
+         var str = 'Hello';
+   	 str=str.toLowerCase();
+  	 str=str.toUpperCase();
+   	 print(str);
+     --> Get length
+         var str = 'Hello World';
+   	 var l = str.length;
+   	 print(l);sssssssss
+    --> Remove space from start and end
+         var str = ' Hello World';
+   	 str=str.trim();
+   	 var l = str.length;
+   	 print(l);
+    --> Compare 
+         // 1 => means first string is greater than the second
+ 	 // -1 => means first string is smaller than second
+         var str1 = 'Hello';
+   	 var str2 = 'hello';
+   	 print(str1.compareTo(str2));
+    --> Replace 
+         var str1 = 'My name is Vishal';
+   	 print(str1.replaceAll('Vishal','Noman'));
+   --> Split 
+         var str1 = 'My name is Vishal';
+   	 var arr = str1.split(' ');
+   	 print(arr[3]);
+   --> Substring 
+         var str1 = 'My name is Vishal';
+   	 print(str1.substring(6));
+  	 print(str1.substring(2,6));
+7. Operatiors
+    ==> operators topics
+      --> Arithemic 
+           var a = 10;
+  	   var b = 20;
+  	   print(a+b);
+  	   print(a-b);
+  	   print(a*b);
+  	   print(a/b);
+  	   print(a~/b); => point (.) ka bad vali amount ko remove krta ha
+           print(a%b); => reminder deta ha (a ko under or b ko bahir)
+     --> Relational operator
+           var a = 10;
+  	   var b = 20;
+  	   print(a>b);
+  	   print(a<b);
+  	   print(a>=b);
+  	   print(a<=b);
+  	   print(a==b); 
+  	   print(a!=b);
+    -->  Type Test Operators
+            var a = 'hello i am';
+  	    print(a is String);
+  	    print(a is! String);
+   --> Increment and Decrement 
+            var a = 10;
+  	    print(a++); // increase after print [output => 10]
+  	    print(++a); // increase befors print [output => 11]
+  	    print(a--); // decrease after print [output => 10]
+  	    print(--a); // decrease before print [output => 9]
+   --> Assignment 
+            var a = 30;
+  	    a+= 10; increase ten [output => 40]
+  	    a-= 10; decrease ten [output => 20]
+  	    print(a);
+   --> Logical
+            var a = 30;
+            var b = 20;
+            // || => mean or 
+            // && => and
+            if (a == 30 || b ==10){
+                print("Work done");
+            } else{
+                print("Not done");
+            }
+
+  --> Conditional
+           var a = 30;
+           // Skeleton 
+	   // Condition ? print if true : print if false
+           print(a==30?'Yes Condition True':'No Condition and true it is false');
+  --> Cascade notation
+           var str = 'NOMAN';
+ 	   print(str..substring(4)..toLowerCase());
+  --> Bitwise Operation
+           // explanation
+             * Dekho table ki kahi na kahi pic zaroor rakhi hi gi ya google sy 
+             * search kr lo.
+	     * Sab sy phali kuch is tarha number likho jo ka ik dosry ka do guna hon 
+             * Like (128,64,32,16,8,4,2,1)
+	     * Nichy jasu a or b hain un ma sy phaly a ko lo or pir usy upper number ma 
+	     * dekho ka kon kon sa number ko plus kr k vo number pura hota ha 
+             * like (16,2,1 => 19) pir in thini k nichy  one one likh do or baki zero
+             * pir dosry k sath b same krna ha.
+  	     * Pir jo operator diya ha us ka table ka matabak next likho 
+	     * Pir jis jis number k nichy one likha ho us ko number ko plus kr lo 
+             * javab aa jay ga .
+             * Last ma ye sign (~) ka matlab jis k sath ho us ka one ko zero or
+    	     * zero ko one ma change kr do matlab ult (reverse)
+             * Aghr nahi samaj aaya tu koi video dekh lo ma ny pura explain kr diay
+             * Ok mujy lagta ha samj aa gya ho ga  
+           var a = 19;
+  	   var b = 13;
+  	   print(a&b); [output => 1]
+  	   print(a|b); [output => 31]
+  	   print(a& ~b); [output => 18]
+  	   print(a^b); [output => 30]
+   	   print(a<<b); [output => 155648]
+  	   print(a>>b); [output => 0]
+8. Control Structure
+    ==> if else Condition
+        --> if else statement
+              var name = 'Jazal';
+  	      if (name == 'Noman'){
+    	           print('Now true');
+  	      } else if(name == 'Jazal'){
+    	          print('Now jazal true');
+ 	      }
+  	      else{
+   	         print('Ooh! false');
+ 	      }
+	--> Switch case
+               var name = 'Jazal';
+	       switch(name){
+    	           case 'Noman':
+      	           print('Now switch true Text => Noman');
+     	           break;
+      	           case 'Jazal':
+      	           print('Now switch true Text => Jazal');
+      	           break;
+    	           default:
+      	           print('Ooh! all false value.');
+  	       }
+  
+9. Loops
+   ==> LOOPS
+	--> for loop
+          //   skeleton x = number; kab tk chaly ga; kya function ho ga
+          for(int x = 1;x<=10;x++){
+              print(x);
+          }s
+	--> while loop
+              int x = 1;
+              while(x <=10){
+                  print(x);
+                  x++;
+              }
+	--> do while
+	      int x = 11;
+   	      do{
+    		print(x);
+    		x++;
+  	      } while(x <=10);
+10. Collections
+     ==> List
+        Fixed List => limited item
+        Growable List => unlimited item
+        --> Fixed List
+             List<int> larr=List(3);
+  	     larr[0] = 10;
+  	     larr[1] = 20;
+  	     larr[2] = 30;
+  	     for(int i in larr){
+    		print(i);
+  	     }
+   	     for(int i=0; i<larr.length; i++){
+     		print(larr[i]);
+   	     }
+  
+  	     larr.forEach((x)=>print(x));
+       --> Growable list
+             List<int> larr=List();
+  	     larr.add(10);
+  	     larr.add(20);
+  	     larr.add(30);
+  	     larr.add(40);
+  	     larr.add(50);
+  	     larr.add(60);
+
+  	     larr[1] = 100;
+  	     larr.remove(10);
+  	     larr.removeAt(1);
+  	     larr.clear();
+   ==> Sets
+    --> First Type
+             /* Set<int> sarr=Set();
+  	     sarr.add(10);
+  	     sarr.add(20);
+  	     sarr.add(30);
+  	     sarr.add(40);
+  	     sarr.add(50);
+  	     sarr.add(60); */
+      --> Second Type
+  	     Set<int> sarr= Set.from([34,566,7,8,6,5,44,4,3,3,3,3,4]);
+  	     sarr.contains(44);
+  	     sarr.isEmpty;
+  	     sarr.length;
+  	     sarr.clear();
+  	     for(int x in sarr){
+       	       print(x);
+             }
+   ==> Maps
+     --> Two Type
+         -> First Type
+            Map<String, String> marr= Map();
+         -> Second Type
+  	    Map<String, String> marr={
+    	       'Name': 'Noman',
+    	       'Email': 'nomanjazal@gmail.com'
+  	    };
+  	    marr['City'] = 'Lahore';
+   	    for(String keys in marr.values){
+     	        print(keys);
+   	    }
+   	    marr.forEach((keys, values)=> print(keys+'-'+values));
+  	    marr.remove('Name');
+  	    marr.length;
+  	    marr.isEmpty;
+  	    marr.containsKey('Name');
+  	    marr.containsValue('Lahore');
+  	    marr.clear(); 
+
+11. Functions
+  ==> Functions
+      --> Simple Function 
+
+            void main(){
+                 getNumber(20,10);
+    		 var x = getNumber(20,10);
+   		 print(x*2);
+	    }
+	    getNumber(int a, int b){
+  		print(a+b);
+  		return a*b;
+	    }
+  
+      --> Function Expression || Fat Arrow
+
+            void main(){
+  	         getNumber(20,10);
+	    }
+	    getNumber(int a, int b)=> print(a*b);
+
+      --> Optional Parameter
+            /// Explanation
+              * Is function ki example laty hovy jo nichy ha.
+   	      * Aghr b user define na kry tu error deny ki bajay default value add kr lo
+            void main(){
+  		getNumber(20,20);
+            }
+            getNumber(int a, [int b= 10]){ 
+  		print(a+b);s           
+            }
+    --> Named parameter
+
+            void main(){
+  	         getNumber(10, z:30, y:20);
+            }
+	    getNumber(int x, {int y, int z}){ 
+  		print(x);
+  		print(y);
+  		print(z);
+  		var num= (x+y)*z;
+  		print(num);                     
+	   }
+
+12. Class
+     ==> Oops
+        --> Class
+
+      	        void main(){
+  		    var clss = class1();
+  		    clss.func1();
+	        }
+
+		class class1{
+  		    func1(){ 
+  		    print("Hello "+name);
+  		    }
+		}
+
+        --> Function in class
+
+                void main(){
+  		     var clss = class1();
+  		     clss.name = 'Noman';
+  		     clss.func1();
+  		     print(clss.name);
+		}
+		class class1{
+  		     var name;
+ 		     func1(){ 
+  		         print("Hello "+name);
+  		     }
+		} 
+	 --> Constructor
+   	     -> Default => Aghr class ko call krain tu phaly constructor call hota bad ma 
+                       //  koi or function.
+                    void main(){
+  		         var clss = class1();
+  		         clss.func1();
+		    }
+		    class class1{
+ 
+  		         class1(){  // Constructor
+  			 print("I am A CLASS");
+  		    }
+  			 func1(){ 
+  			 print("What i need to write");
+  			 }
+		}
+	     -> Parameter contructor
+
+     	            void main(){
+  			var clss = class1('Noman');
+  			clss.func1();
+		    }
+		    class class1{
+  		        var name;
+  		        class1(name){ 
+    		           this.name= name; //  Focus Here
+  		        }
+  		        func1(){ 
+  		          print("What i need to write "+ name);
+  		        }
+		    }
+
+	     -> Non-Parameter contructor
+     	            void main(){
+  			var clss = class1('Noman');
+  			clss.func1();
+		    }
+		    class class1{
+  		        var name;
+  		        class1(this.name){  // Here changed
+    		 
+  		        }
+  		        func1(){ 
+  		          print("What i need to write "+ name);
+  		        }
+		    }
+
+	  -> Named Constructor
+
+                   void main(){
+  		        var clss = class1.myConstructor('NOMAN');
+  		        clss.func1();
+		   }
+		class class1{
+ 		       var name;
+ 		       class1.myConstructor(this.name){ // Here Name
+  		       }
+  		       func1(){
+    		           print('Hello '+name);
+  		       }
+		}
+	--> polymorphism
+ 	        /// Explanation
+		      * polymorphism (super.[any variable name or function]) ka liye use hota ha.
+                      * Jab child, parent class ma same name sy function or variable ho tu
+        	      * jasy hi call kiya jata ha tu vo sirf child ka function or variable ko
+`		      * accept krta ha. 
+		      * Parent ka function ko call krny k liye super ko call krna parta ha.
+		      * Aghr samj nahi aaya tu python ka Oops samj lo Ok takriban same ha.
+                      * Good Luck [26/4/2021]
+		 void main(){
+  		      var obj = new hr();
+  		      obj.func1();
+		 }
+		class class1{
+  		      var name= 'Noman';
+  		      func1(){
+   		      print('func1_class1');
+  		      }
+		}
+		class hr extends class1{
+  		      var name='USK';
+   		      func1(){
+     		      print(super.name);
+     		      print('func1_class2: name[hr] '+name);
+      		      super.func1();
+  		 }
+		}
+         --> Abstract class
+ 	        /// Explanation
+		      * abstract is liye use hota ha jab ka apni child class ko ye batana ho k
+                      * vo function jo us ma ha vo child ma hona zarori ha. 
+		      * Hum abstract class ka object create nahi kr sakty.
+                void main(){
+  		     var obj = new hr(); // Object
+  		     print(obj.name);
+  		     obj.func1();
+		}
+		abstract class class1{  // abstract class
+  		     var name= 'Noman';
+  		     func1(); // Complusary function for child class
+		}
+		class hr extends class1{
+   		     func1(){  // Create here
+     		     print("Ok I am There");
+   		     }
+  
+		}
+
+	--> Interface || implements
+ 	        /// Explanation
+		      * Interface ma (implements) use hota ha ta k ik child ko ik sy zayada 
+   		      * parent sy inherit kiya jay.
+		      * Is ma b jo funtion parent k hoty hain vo child ma hony zarori 
+		      * hoty hain. Done Well Done Keep It Up. Love You Noman. [Haha]
+              void main(){
+  		   var obj = new class3();
+  		   obj.func1();
+	      }
+	      class class1{
+  		   func1(){
+     	               print("I am in class one [class_1]");
+   	           }
+              }
+	      class class2{
+   		   func2(){
+     		       print("I am in class two [class_2]");
+   		   }
+  
+	      }
+	      class class3 implements class1, class2{ // Focus here
+  		   func1(){
+    		       print("I am in class three [class_3]");
+  	           }
+  	           func2(){
+    	               print("I am in class three [class_3]");
+  	           }
+	      }
+
+================================== The End ================================================
+
+
+https://codecanyon.net/item/quizzio-php-quiz-website-script-viral-social-quizzes/15319047
+https://codecanyon.net/item/exam-quiz-application/23640869 (for sir)
+http://preview.codecanyon.net/item/pesi-questionnaire-multiresult-survey-and-quiz-wordpress-plugin/full_screen_preview/20579837?_ga=2.158016890.1189657905.1619386936-2080906409.1611686054
+http://www.apphp.com/php-survey/examples/sample2/
+
+https://www.youtube.com/watch?v=PPsxyAdzIJ0s
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. -----------------------> s
+
+
+
+
+
